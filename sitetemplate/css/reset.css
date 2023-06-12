@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  word-break: keep-all;
+}
+body {
+  color: #666;
+  text-decoration: none;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.serif{
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+li {
+  list-style: none;
+}
+
+iframe,
+img,
+svg,
+video,
+canvas {
+  display: block;
+}
+
+iframe, fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+input, textarea, select {
+  box-sizing: border-box;
+}
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hidden{
+  position: fixed;
+  left:-10000px
+}

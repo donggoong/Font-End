@@ -1,0 +1,42 @@
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 500px);
+  height: min(80%, 700px);
+  transition: opacity 1s;
+}
+.loader h6 {
+  position: relative;
+  z-index: 1;
+}
+.loader h6 img {
+  width: 100%;
+}
+.loader figure {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(60%, 300px);
+  mix-blend-mode: multiply;
+}
+.loader figure .spinner {
+  margin: 0 auto;
+  width: 30%;
+}
+.loader figure .pensil {
+  width: 100%;
+}
+.loader .main-bg {
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, 0);
+  height: 103%;
+  width: 110%;
+}
+.loader.fade-out {
+  opacity: 0;
+}/*# sourceMappingURL=loader.css.map */

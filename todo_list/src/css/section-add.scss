@@ -1,0 +1,58 @@
+@use 'mixin' as m;
+.section-add{
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    p{
+      @media #{m.$minSm}{
+        width: 50%;
+        &.date-wrap{
+          box-sizing: border-box;
+          padding-right: 5px;
+        }
+        &.time-wrap{
+          box-sizing: border-box;
+          padding-left: 5px;
+          @include m.inputWrap(url('../assets/img/icons/icon-clock.png'),false);
+        }
+      }
+      @media #{m.$maxSm}{
+        width: 100%;
+      }
+      &.date-wrap{
+        @include m.inputWrap(url('../assets/img/icons/icon-calendar.png'),false);
+      }
+      &.time-wrap{
+        @include m.inputWrap(url('../assets/img/icons/icon-clock.png'),false);
+      }
+      &.title-wrap{
+        width: 100%;
+        @include m.inputWrap(url('../assets/img/icons/icon-pencil.png'),true);
+      }
+      &.desc-wrap{
+        width: 100%;
+        @include m.inputWrap(url('../assets/img/icons/icon-speechbubble.png'),true);
+      }
+      &.photo-wrap{
+        width: 100%;
+        @include m.inputWrap(url('../assets/img/icons/icon-photo.png'),true);
+      }
+    }
+  }
+  .btn-wrap{
+    text-align: center;
+    button,a{
+      display: inline-block;
+      width: 45%;
+      max-width: 200px;
+      &:active{
+        animation: rubberBand .3s;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

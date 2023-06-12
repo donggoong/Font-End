@@ -1,0 +1,128 @@
+.section5 article {
+  height: calc(100vh - var(--header-height));
+}
+.section5 article.bg {
+  position: sticky;
+  top: var(--header-height);
+}
+.section5 article.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.section5 article.bg video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  mix-blend-mode: screen;
+}
+.section5 article.earth {
+  position: sticky;
+  top: var(--header-height);
+  mix-blend-mode: overlay;
+}
+.section5 article.earth figure {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 600px);
+}
+.section5 article.earth figure img {
+  width: 100%;
+}
+.section5 article.earth figure img.dummy {
+  opacity: 0;
+}
+.section5 article.earth figure img.img {
+  position: absolute;
+  top: 0;
+}
+.section5 article.progress {
+  position: sticky;
+  top: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section5 article.progress ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section5 article.progress ul li {
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 330px;
+}
+.section5 article.progress ul li svg {
+  width: 100%;
+}
+.section5 article.progress ul li svg .poly-circle {
+  fill: rgba(255, 255, 255, 0.3);
+  stroke: var(--main-color);
+  stroke-width: 7px;
+}
+.section5 article.progress ul li svg .circle {
+  fill: rgba(255, 255, 255, 0.8);
+}
+.section5 article.progress ul li svg .progress {
+  fill: none;
+  stroke: var(--main-color);
+  stroke-width: 15px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 2s;
+}
+.section5 article.progress ul li .textbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.section5 article.progress ul li .textbox i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  color: #FFF;
+  background: #2b0609;
+}
+.section5 article.progress ul li .textbox h3 {
+  margin: 5px 0;
+  color: #2b0609;
+  font-weight: 600;
+  font-size: min(3.5vw, 1.2em);
+  text-shadow: 1px 1px 0 #666;
+}
+.section5 article.progress ul li .textbox b {
+  line-height: 0.7em;
+  font-size: min(7vw, 3.5em);
+  font-weight: 700;
+  color: #2b0609;
+  text-shadow: 1px 2px 0 #666;
+}
+@media screen and (min-width:1000px) {
+  .section5 article.progress ul li {
+    width: 25%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .section5 article.progress ul li {
+    width: 50%;
+  }
+}
+.section5 article.progress ul li.active .progress {
+  stroke-dashoffset: 0;
+}
+.section5 .dummy-scroll {
+  height: calc(100vh - var(--header-height));
+}/*# sourceMappingURL=section5.css.map */

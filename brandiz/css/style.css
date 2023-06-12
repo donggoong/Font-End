@@ -1,0 +1,202 @@
+body {
+  color: #666;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-color: #1cbdb4;
+  --sub-color: #a8e9e5;
+  --dark-color: #333;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width:1000px) {
+  :root {
+    --header-height: 71px;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  :root {
+    --header-height: 60px;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: -1;
+  }
+
+  30% {
+    stroke-dashoffset: 0;
+  }
+
+  70% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes updown {
+  0% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: -5px;
+  }
+}
+
+@keyframes leftright {
+  0% {
+    transform: rotate(-15deg);
+    transform-origin: center bottom;
+  }
+
+  100% {
+    transform: rotate(15deg);
+    transform-origin: center bottom;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(-1%);
+  }
+
+  1% {
+    transform: translateX(0%);
+  }
+
+  2% {
+    transform: translateX(-0.56%);
+  }
+
+  3% {
+    transform: translateX(0.72%);
+  }
+
+  4% {
+    transform: translateX(-0.4%);
+  }
+
+  5% {
+    transform: translateX(-2%);
+  }
+
+  6% {
+    transform: translateX(0%);
+  }
+
+  7% {
+    transform: translateX(1%);
+  }
+
+  8% {
+    transform: translateX(-1%);
+  }
+
+  9% {
+    transform: translateX(2%);
+  }
+
+  10% {
+    transform: translateX(-1%);
+  }
+
+  11% {
+    transform: translateX(0.5%);
+  }
+
+  12% {
+    transform: translateX(-0.4%);
+  }
+
+  13% {
+    transform: translateX(1%);
+  }
+
+  14% {
+    transform: translateX(-0.9%);
+  }
+
+  15% {
+    transform: translateX(0%);
+  }
+
+  16% {
+    transform: translateX(3%);
+  }
+
+  17% {
+    transform: translateX(-0.4%);
+  }
+
+  18% {
+    transform: translateX(0%);
+  }
+
+  19% {
+    transform: translateX(0.4%);
+  }
+
+  20% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    top: 110%;
+  }
+
+  100% {
+    top: -10%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 1px #FFF);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 20px #FFF);
+  }
+}
+
+.title {
+  position: relative;
+  width: min(95%, 1000px);
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: min(10vw, 5em);
+  color: #FFF;
+}
+
+.title::before {
+  content: attr(data-content);
+  position: absolute;
+  overflow: hidden;
+  color: var(--main-color);
+  height: 50%;
+}

@@ -1,0 +1,115 @@
+.biz_intro_section {
+  overflow: hidden;
+}
+
+.biz_intro_section>p {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.biz_intro_section ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.biz_intro_section ul li {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.biz_intro_section ul li figure {
+  padding: 5px;
+  background: #CCC;
+  border: 1px solid #CCC;
+}
+
+.biz_intro_section ul li figure div {
+  overflow: hidden;
+}
+
+.biz_intro_section ul li figure div img {
+  width: 100%;
+}
+
+.biz_intro_section ul li figure figcaption {
+  padding: 10px;
+  background: var(--main-color);
+  color: #FFF
+}
+
+.biz_intro_section ul li figure figcaption h3 {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-bottom: 1px dotted #EEE;
+}
+
+@media screen and (min-width:900px) {
+  .biz_intro_section ul li {
+    flex: 1;
+  }
+  
+  .biz_intro_section ul li figure{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .biz_intro_section ul li figure figcaption {
+    flex:1;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .biz_intro_section ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .biz_intro_section ul li {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* motion */
+.biz_intro_section>p {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.biz_intro_section>p:nth-of-type(odd) {
+  transform: translateX(100px);
+}
+
+.biz_intro_section>p:nth-of-type(even) {
+  transform: translateX(-100px);
+}
+
+.biz_intro_section>p.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.biz_intro_section li {
+  opacity: 0;
+  filter: grayscale(1) blur(2px);
+  transition: opacity 2s, filter 2s;
+}
+
+.biz_intro_section li.active {
+  opacity: 1;
+  filter: grayscale(0) blur(0);
+}
+
+@media screen and (min-width:900px) {
+  .biz_intro_section li.active:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .biz_intro_section li.active:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+}

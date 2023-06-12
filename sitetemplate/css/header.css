@@ -1,0 +1,275 @@
+header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  transition: top .8s;
+}
+
+header.active{
+  position: fixed;
+  top: -35px;
+}
+
+header .top {
+  height: 35px;
+  background-color: var(--dark-color);
+}
+
+header .top .member {
+  max-width: 1200px;
+  width: 95%;
+  height: inherit;
+  margin: 0 auto;
+  text-align: right;
+}
+
+header .top .member a {
+  color: #AAA;
+  margin-left: 7px;
+  font-size: 0.9em;
+  line-height: 35px;
+}
+
+header .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 95%;
+  height: calc(100% - 35px);
+  margin: 0 auto;
+}
+
+h1 {
+  height: 70%;
+}
+
+h1 a img {
+  height: 100%;
+}
+
+@media screen and (min-width:1000px) {
+  body {
+    padding-top: 130px;
+  }
+
+  header {
+    height: 130px;
+  }
+
+  .mbtn,
+  .gnb.sm {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  body {
+    padding-top: 100px;
+  }
+
+  header {
+    height: 100px;
+  }
+
+  .gnb.lg {
+    display: none;
+  }
+}
+
+/* mbtn */
+.mbtn {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background-color: var(--dark-color);
+  border-radius: 5px;
+}
+
+.mbtn i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  font-size: 1.3em;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.mbtn.active .open {
+  opacity: 0;
+}
+
+.mbtn.active .close {
+  opacity: 1;
+}
+
+.mbtn .close {
+  opacity: 0;
+}
+
+/* .gnb.sm */
+.gnb.sm {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gnb.sm.active>ul {
+  transform: translateX(0);
+}
+
+.gnb.sm>ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  padding-top: 110px;
+  background: #fff;
+  /* motion */
+  transform: translateX(100%);
+  transition: all, .5s;
+}
+
+.gnb.sm>ul>li>a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 1.15em;
+  font-weight: 500;
+  border-bottom: 1px solid #CCC;
+  transition: all .3s;
+}
+
+.gnb.sm>ul>li>a::after {
+  float: right;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f077";
+  margin-top: 3px;
+  transition: all, 0.3s;
+}
+
+.gnb.sm>ul>li>a.active {
+  color: var(--point-color);
+}
+
+.gnb.sm>ul>li>a.active::after {
+  transform: rotateX(180deg);
+  transition: all, 0.3s;
+}
+
+.gnb.sm>ul>li .en{
+  display: none;
+}
+
+.gnb.sm>ul>li>ul {
+  display: none;
+}
+
+.gnb.sm>ul>li>ul>li>a {
+  display: block;
+  padding: 10px 25px;
+  border-bottom: 1px solid var(--sub-color);
+  color: #fff;
+  background: var(--main-color);
+  transition: all .3s;
+}
+
+.gnb.sm>ul>li>ul>li>a:hover {
+  background: var(--sub-color);
+}
+
+/* .gnb.lg */
+.gnb.lg {
+  height: 45px;
+}
+
+.gnb.lg>ul {
+  display: flex;
+  height: 100%;
+}
+
+.gnb.lg>ul>li {
+  position: relative;
+  height: 100%;
+}
+
+.gnb.lg>ul>li>ul{
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+}
+
+.gnb.lg>ul>li>a {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  padding: 0 40px;
+  overflow: hidden;
+  font-size: 1.15em;
+  font-weight: 500;
+  line-height: 45px;
+  transition: all, 0.3s;
+}
+
+.gnb.lg>ul>li>a>span {
+  display: block;
+  height: 100%;
+  transition: all, 0.3s;
+}
+.gnb.lg>ul>li>a>span.en{
+  position: absolute;
+  left: 50%;
+  top: 45px;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.gnb.lg>ul>li:hover>a{
+  color: var(--point-color);
+}
+
+.gnb.lg>ul>li:hover>a>span{
+  margin-top: -45px;
+}
+
+.gnb.lg>ul>li>ul>li>a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  white-space: nowrap;
+  color:#fff;
+  background: var(--main-color) ;
+}
+
+.gnb.lg>ul>li>ul>li>a:hover{
+  background: var(--sub-color);
+  transition: all 0.3s;
+}
+
+.gnb h6,
+.gnb ul>li.member,
+.gnb ul>li.sns{
+    display: none;
+}
+
+

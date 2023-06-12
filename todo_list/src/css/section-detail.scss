@@ -1,0 +1,107 @@
+@use 'mixin' as m;
+
+.section-detail{
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .thumbnail{
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 90%;
+        max-width: 250px;
+        background: var(--green);
+      }
+    p{
+      text-align: center;
+      @media #{m.$minSm}{
+        width: 50%;
+        &.date-wrap{
+          box-sizing: border-box;
+          padding-right: 5px;
+        }
+        &.time-wrap{
+          box-sizing: border-box;
+          padding-left: 5px;
+          @include m.inputWrap(url('../assets/img/icons/icon-clock.png'),false);
+        }
+      }
+      @media #{m.$maxSm}{
+        width: 100%;
+      }
+      &.date-wrap{
+        @include m.inputWrap(url('../assets/img/icons/icon-calendar.png'),false);
+      }
+      &.time-wrap{
+        @include m.inputWrap(url('../assets/img/icons/icon-clock.png'),false);
+      }
+      &.title-wrap{
+        width: 100%;
+        @include m.inputWrap(url('../assets/img/icons/icon-pencil.png'),true);
+      }
+      &.desc-wrap{
+        width: 100%;
+        @include m.inputWrap(url('../assets/img/icons/icon-speechbubble.png'),true);
+      }
+      &.remember-wrap{
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        label{
+          cursor: pointer;
+          img{
+            display: inline-block;
+            vertical-align: middle;
+            height: 30px;
+            &:nth-child(2){
+              display: none;
+            }
+          }
+        }
+        input:checked + label{
+          img{
+            &:nth-child(1){
+              display: none;
+            }
+            &:nth-child(2){
+              display: block;
+            }
+          }
+        }  
+      }
+      &.photo-wrap{
+        width: 100%;
+        @include m.inputWrap(url('../assets/img/icons/icon-photo.png'),true);
+      }
+    }
+  }
+  .btn-wrap{
+    text-align: center;
+    button,a{
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+    button{
+      width: 37%;
+      max-width: 150px;
+      &:active{
+        animation: rubberBand .3s;
+      }
+      img{
+        width: 100%;
+      }
+    }
+    a{
+      display: inline-block;
+      width: 12%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

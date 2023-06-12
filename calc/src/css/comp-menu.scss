@@ -1,0 +1,91 @@
+@use "./mixin" as m;
+#root {
+  section.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    h1{
+      margin-bottom: 60px;
+    }
+    form.theme {
+      legend {
+        margin-bottom: 10px;
+        font-weight: 800;
+        font-size: 0.8em;
+        text-align: center;
+      }
+      div {
+        display: flex;
+        width: 180px;
+        height: 30px;
+        border: 1px solid rgba(#eee, 0.8);
+        border-radius: 30px;
+        box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+          3px 3px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        input {
+          display: none;
+          &:checked + label {
+            opacity: 1;
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+        label {
+          position: relative;
+          flex: 1;
+          opacity: 0.8;
+          transition: opacity 0.5s;
+          cursor: pointer;
+          @include m.icon(before, "\f00c");
+          &[for="radio1"] {
+            background: gray;
+          }
+          &[for="radio2"] {
+            background: beige;
+          }
+          &[for="radio3"] {
+            background: skyblue;
+          }
+          &::before {
+            @include m.posLT(absolute, 50%, 50%, -50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            color: #fff;
+            text-shadow: 0 0 2px #000;
+          }
+        }
+      }
+    }
+    nav {
+      margin-top: 50px;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      a {
+        display: block;
+        margin: 20px 0;
+        padding: 7px 20px;
+        box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+          3px 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        text-align: center;
+        &:hover {
+          text-shadow: -2px -2px 1px rgba(255, 255, 255, 1),
+            2px 2px 1px rgba(0, 0, 0, 0.1);
+        }
+        &:active{
+          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.3),
+          3px 3px 5px rgba(255, 255, 255, 1);
+        }
+        i{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

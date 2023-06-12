@@ -1,0 +1,63 @@
+@use 'mixin' as m;
+
+header{
+  position: relative;
+  height: 10%;
+  .pin{
+    @include m.posLB(absolute, 51%,10%,-50%,0);
+    height: 100%;
+  }
+  >div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+      height: 80%;
+      img{
+        height: 100%;
+      }
+    }
+    &.logged-before{
+
+    }
+    &.logged-after{
+      p{
+        display: flex;
+        align-items: center;
+        &.user{
+          width: 45%;
+          img{
+            box-sizing: border-box;
+            margin-right: 5px;
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            object-position: center;
+            border: 3px solid var(--green);
+            border-radius: 50%;
+          }
+          span{
+            flex: 1;
+            overflow: hidden;
+            em{
+              display: block;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 0.85em;
+              letter-spacing: 0;
+            }
+          }
+        }
+        &.btns{
+          button{
+            margin-left: 10px;
+            img{
+            }
+          }
+        }
+      }
+    }
+  }
+}

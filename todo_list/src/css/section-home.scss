@@ -1,0 +1,86 @@
+@use "mixin" as m;
+.section-home {
+  .scroll-wrap {
+    ul {
+      li {
+        opacity: 0;
+        animation: fadeIn 2s;
+        animation-fill-mode: both;
+        @keyframes fadeIn {
+          0%{opacity: 0;}
+          100%{opacity: 1;}
+        }
+        &:nth-child(even){
+          background: rgba(#FFF,0.3);
+        }
+        a {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 15px 5px;
+          background-image: url(../assets/img/list/line-dashed.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center bottom;
+          .thumbnail {
+            box-sizing: border-box;
+            margin-right: 10px;
+            padding: 5px;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            object-position: center;
+            background: var(--orange);
+          }
+          .metabox {
+            width: calc(100% - 70px);
+            p {
+              display: flex;
+              width: 100%;
+              > time,em {
+                display: flex;
+                align-items: center;
+                margin-right: 10px;
+                img {
+                  margin-right: 5px;
+                }
+              }
+              time{
+                font-size: 0.9em;
+                letter-spacing: 0em;
+              }
+              .date {
+                color: var(--green);
+              }
+              .time {
+                color: var(--sky);
+              }
+              .title {
+                display: block;
+                max-width: 300px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: #000;
+                img{display: inline-block}
+              }
+            }
+          }
+          .more{
+            @include m.posRT(absolute,5px,50%,0,-50%);
+            @media #{m.$maxSm}{display: none;};
+          }
+          &:hover{
+            background-color: var(--beige);
+          }
+        }
+      }
+    }
+    .scroll-trigger{
+      height: 50px;
+    }
+  }
+  .add-btn.wrap {
+    @include m.inputWrap(none, false);
+  }
+}

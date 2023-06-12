@@ -1,0 +1,140 @@
+.section1 {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.section1 .bg {
+  height: 100%;
+  background-image: url(../img/section1/section1-sky.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.section1 .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: url(#ripple-filter1);
+}
+@media screen and (orientation:landscape) {
+  .section1 .desc {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    height: 60%;
+  }
+}
+@media screen and (orientation:portrait) {
+  .section1 .desc {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0%);
+    height: 40%;
+  }
+}
+.section1 .desc figure.title {
+  position: relative;
+  height: 75%;
+}
+.section1 .desc figure.title svg {
+  position: relative;
+  height: 100%;
+}
+.section1 .desc figure.title svg * {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 1;
+}
+.section1 .desc figure.title img {
+  position: absolute;
+  height: 20%;
+}
+.section1 .desc figure.title img.deco1 {
+  left: 7.2%;
+  top: -14%;
+  animation: leftright 1s infinite alternate linear;
+}
+.section1 .desc figure.title img.deco2 {
+  right: 6%;
+  top: 51%;
+  animation: updown 2s infinite linear alternate;
+}
+.section1 .desc figure.slogun {
+  height: 25%;
+}
+.section1 .desc figure.slogun img {
+  height: 100%;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+.section1 .boy {
+  position: absolute;
+}
+@media screen and (orientation:landscape) {
+  .section1 .boy {
+    right: -10%;
+    bottom: -20%;
+    height: 90%;
+  }
+}
+@media screen and (orientation:portrait) {
+  .section1 .boy {
+    right: max(-40%, -150px);
+    bottom: 0%;
+    height: 50%;
+  }
+}
+.section1 .boy img {
+  height: 100%;
+}
+.section1 .boy img.original {
+  position: relative;
+}
+.section1 .boy img.glitch {
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+}
+.section1 .boy img.glitch.glitch1 {
+  filter: saturate(300%) hue-rotate(300deg);
+  animation: glitch 3s infinite;
+}
+.section1 .boy img.glitch.glitch2 {
+  filter: saturate(300%) hue-rotate(150deg);
+  animation: glitch 3s infinite 0.5s;
+}
+.section1 .bubbles {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section1 .bubbles img {
+  position: absolute;
+  animation-name: bubble;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* motion */
+.section1 .desc .title svg * {
+  stroke-dashoffset: 1;
+  transition: all 1s;
+}
+.section1 .desc .slogun {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s;
+}
+
+.section1.active .desc .title svg * {
+  stroke-dashoffset: 0;
+}
+.section1.active .desc .slogun {
+  opacity: 1;
+  transform: translateY(0);
+}/*# sourceMappingURL=section1.css.map */

@@ -1,0 +1,63 @@
+@use './mixin' as m;
+.single-section{
+  width: min(90%, 1000px);
+  margin: 0 auto;
+  dl.meta{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border-top: 3px double #CCC;
+    dt,dd{
+      padding: 10px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #CCC;
+    }
+    dt{
+      width: 25%;
+      text-align: center;
+      color: #FFF;
+      background: var(--dark);
+    }
+    dd{
+      width: 75%;
+    }
+  }
+  article{
+    figure{
+      img{
+        max-width: 100%;
+        margin: 30px auto;
+        padding: 10px;
+        background: #EEE;
+        border: 1px solid #CCC;
+        box-shadow: 10px 10px 0 var(--blue);
+      }
+    }
+    p{
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.6em;
+    }
+  }
+  .post-nav{
+    padding: 10px;
+    margin-top: 40px;
+    border-top: 1px solid #CCC;
+    text-align: center;
+    a{
+      display: inline-block;
+      margin: 0 5px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      transition: all .3s;
+      &:hover{
+        background: var(--blue);
+        color: #FFF;
+      }
+    }
+  }
+}

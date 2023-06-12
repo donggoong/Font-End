@@ -1,0 +1,110 @@
+.masonry_container li {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.masonry_container li a {
+  display: block;
+  padding: 5px;
+  background: #EEE;
+  border: 1px solid #CCC;
+}
+
+.masonry_container li a figure {
+  position: relative;
+}
+
+.masonry_container li a figure img {
+  width: 100%;
+}
+
+.masonry_container li a figure figcaption {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, .7);
+}
+
+.masonry_container li a figure figcaption h3 {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0 20px 0 20px;
+  background: var(--point-color);
+}
+
+.masonry_container li a figure figcaption p {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border-radius: 20px 0 20px 0;
+  background: var(--sub-color);
+}
+
+@media screen and (min-width:1200px) {
+  .masonry_container li {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:1200px) {
+  .masonry_container li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .masonry_container li {
+    width: 100%;
+  }
+}
+
+/* motion */
+.masonry_container li a figure {
+  overflow: hidden;
+}
+
+.masonry_container li a figure img {
+  transition: all .5s;
+}
+
+.masonry_container li a:hover figure img {
+  transform: scale(1.2);
+}
+
+.masonry_container li a figure figcaption {
+  opacity: 0;
+  transition: all .7s;
+}
+
+.masonry_container li a:hover figure figcaption {
+  opacity: 1;
+}
+
+.masonry_container li a figure figcaption h3,
+.masonry_container li a figure figcaption p {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.masonry_container li a figure figcaption h3 {
+  transform: translateX(-100px);
+}
+
+.masonry_container li a figure figcaption p {
+  transform: translateX(100px);
+}
+
+.masonry_container li a:hover figure figcaption h3,
+.masonry_container li a:hover figure figcaption p {
+  opacity: 1;
+  transform: translateX(0);
+}

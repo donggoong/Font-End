@@ -1,0 +1,45 @@
+@use './mixin' as m;
+.page-section-area{
+  overflow: hidden;
+  p{
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 1s;
+    &.active{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  figure{
+    margin: 0;
+    @media #{m.$maxSm} {
+      img:nth-child(1){
+        display: none;
+      }
+      img:nth-child(2){
+        margin: 0 auto;
+        height: 100%;
+      }
+    }
+    @media #{m.$minSm} {
+      img:nth-child(1){
+        width: 100%;
+      }
+      img:nth-child(2){
+        display: none;
+      }
+    }
+    img{
+      opacity: 0;
+      transform: translateX(200px);
+      transition: all 1s;
+    }
+    img.active{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

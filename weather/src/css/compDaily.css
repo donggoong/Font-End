@@ -1,0 +1,81 @@
+.comp-daily {
+  overflow: hidden;
+}
+.comp-daily .section-inner {
+  padding-top: 0 !important;
+}
+.comp-daily .section-inner ul li {
+  padding: 5px;
+  border-bottom: 1px solid rgba(142, 209, 241, 0.5);
+}
+.comp-daily .section-inner ul li a {
+  position: relative;
+  display: block;
+  padding: 10px;
+  transition: all 0.5s;
+}
+.comp-daily .section-inner ul li a .date {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.comp-daily .section-inner ul li a .date span {
+  margin-right: 5px;
+}
+.comp-daily .section-inner ul li a .date span.desc {
+  font-style: italic;
+}
+.comp-daily .section-inner ul li a .info img {
+  display: inline-block;
+  margin-right: 15px;
+  width: 50px;
+  vertical-align: middle;
+}
+.comp-daily .section-inner ul li a .info span {
+  margin-right: 15px;
+}
+.comp-daily .section-inner ul li a .info span i {
+  margin-right: 5px;
+}
+.comp-daily .section-inner ul li a .info span em {
+  font-weight: 600;
+}
+.comp-daily .section-inner ul li a > i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-size: 1.3em;
+  transform: translateY(-50%);
+  transition: all 0.5;
+}
+.comp-daily .section-inner ul li a.active {
+  background: var(--sky);
+  color: #FFF;
+}
+.comp-daily .section-inner ul li a.active > i {
+  transform: translateY(-50%) rotate(180deg);
+}
+.comp-daily .section-inner ul li .detail {
+  display: none;
+  padding: 10px;
+  color: #FFF;
+  background: rgba(67, 120, 163, 0.6);
+}
+.comp-daily .section-inner ul li .detail p {
+  padding: 10px 0;
+  border-bottom: 1px solid #FFF;
+}
+.comp-daily .section-inner ul li .detail p:last-child {
+  border: none;
+}
+.comp-daily .section-inner ul li .detail p span {
+  margin-right: 15px;
+}
+.comp-daily .section-inner ul li .detail p span b {
+  margin: 0 5px;
+}
+.comp-daily .section-inner ul li .detail p span em {
+  font-weight: 600;
+}
+.comp-daily .section-inner ul li .detail p span em small {
+  font-size: 0.85em;
+}/*# sourceMappingURL=compDaily.css.map */

@@ -1,0 +1,57 @@
+div.wpcf7 div.screen-reader-response {
+  display: none;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child):nth-last-child(2) {
+  border: none;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p label {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #FFF;
+  border-radius: 5px;
+  background: var(--dark);
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap {
+  display: block;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap > input:not([type=radio], [type=checkbox]), div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap textarea, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap select {
+  padding: 7px;
+  box-sizing: border-box;
+  width: 100%;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap > input:not([type=radio], [type=checkbox]):focus, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap textarea:focus, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap select:focus {
+  border: none;
+  outline: none;
+  color: #FFF;
+  background: var(--blue);
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap > input:not([type=radio], [type=checkbox]):focus::-moz-placeholder, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap textarea:focus::-moz-placeholder, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap select:focus::-moz-placeholder {
+  color: #FFF;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap > input:not([type=radio], [type=checkbox]):focus::placeholder, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap textarea:focus::placeholder, div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap select:focus::placeholder {
+  color: #FFF;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p span.wpcf7-form-control-wrap span.wpcf7-form-control span.wpcf7-list-item {
+  margin: 0;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p input[type=submit] {
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+  color: #FFF;
+  background: var(--dark);
+  border: 1px solid var(--dark);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+div.wpcf7 form.wpcf7-form > div:not(:first-child) > p input[type=submit]:hover {
+  background: var(--orange);
+  border: 1px solid var(--orange);
+}/*# sourceMappingURL=contact-form-7.css.map */

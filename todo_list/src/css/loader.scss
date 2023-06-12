@@ -1,0 +1,34 @@
+@use 'mixin' as m;
+.loader{
+  @include m.posLT(absolute, 50%, 50%, -50%, -50%);
+  width: min(90%, 500px);
+  height: min(80%, 700px);
+  transition: opacity 1s;
+  h6 {
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+  }
+  figure{
+    @include m.posLT(absolute, 50%, 50%, -50%, -50%);
+    width: min(60%, 300px);
+    mix-blend-mode: multiply;
+    .spinner{
+      margin: 0 auto;
+      width: 30%;
+    }
+    .pensil{
+      width: 100%;
+    }
+  }
+  .main-bg {
+    @include m.posLT(absolute, 50%, 2%, -50%, 0);
+    height: 103%;
+    width: 110%;
+  }
+  &.fade-out{
+    opacity: 0;
+  }
+}

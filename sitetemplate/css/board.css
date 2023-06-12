@@ -1,0 +1,98 @@
+.board {
+  width: 100%;
+  border-top: 4px double var(--main-color);
+}
+
+.board tr {
+  border-bottom: 1px solid #CCC;
+}
+
+.board th,
+.board td {
+  padding: 7px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board th {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.board tbody tr:nth-child(even) {
+  background: #EEE;
+}
+
+.board td a {
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board td a:hover {
+  color: var(--point-color);
+}
+
+.board tr>*:nth-child(1),
+.board tr>*:nth-child(5) {
+  width: 50px;
+}
+
+.board tr>*:nth-child(3),
+.board tr>*:nth-child(4) {
+  width: 120px;
+}
+
+.board_paging {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.board_paging a {
+  margin: 0 3px;
+  font-weight: 600
+}
+
+.board_paging a:hover {
+  color: var(--main-color);
+}
+
+.board_paging a.active {
+  color: var(--point-color);
+}
+
+.board_search {
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #EEE;
+}
+
+.board_search * {
+  padding: 4px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.board_search button {
+  width: 50px;
+  background: var(--dark-color);
+  color: #FFF;
+  transition: all 0.3s;
+}
+
+.board_search button:hover{
+  background: var(--point-color);
+}
+
+@media screen and (max-width:800px) {
+
+  .board tr>*:nth-child(1),
+  .board tr>*:nth-child(4),
+  .board tr>*:nth-child(5) {
+    display: none;
+  }
+}

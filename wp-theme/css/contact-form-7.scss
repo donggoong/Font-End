@@ -1,0 +1,63 @@
+@use './mixin' as m;
+div.wpcf7{
+  div.screen-reader-response{
+    display: none;
+  }
+  form.wpcf7-form{
+    >div:not(:first-child){
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      &:nth-last-child(2){
+        border: none;
+      }
+      >p{
+        label{
+          display: inline-block;
+          padding: 5px 10px;
+          margin-bottom: 10px;
+          font-size: 0.9em;
+          color: #FFF;
+          border-radius: 5px;
+          background: var(--dark);
+        }
+        span.wpcf7-form-control-wrap{
+          display: block;
+          >input:not([type=radio],[type=checkbox]),textarea,select{
+            padding: 7px;
+            box-sizing: border-box;
+            width: 100%;
+            &:focus{
+              border: none;
+              outline: none;
+              color: #FFF;
+              background: var(--blue);
+              &::placeholder{
+                color: #FFF;
+              }
+            }
+          }
+          span.wpcf7-form-control{
+            span.wpcf7-list-item{
+              margin: 0;
+            }
+          }
+        }
+        input[type=submit]{
+          padding: 10px;
+          margin: 0 auto;
+          margin-top: 30px;
+          display: block;
+          color: #FFF;
+          background: var(--dark);
+          border: 1px solid var(--dark);
+          border-radius: 5px;
+          transition: all .3s;
+          &:hover{
+            background: var(--orange);
+            border: 1px solid var(--orange);
+          }
+        }
+      }
+    }
+  }
+} 

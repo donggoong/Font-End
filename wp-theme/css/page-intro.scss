@@ -1,0 +1,93 @@
+@use './mixin' as m;
+.page-section-intro{
+  overflow: hidden;
+  >p {
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  ul{
+    li{
+      padding: 30px 0;
+      border-top: 1px solid #CCC;
+      figure{
+        overflow: hidden;
+        margin: 0;
+        box-sizing: border-box;
+        border: 10px solid #CCC;
+        img{
+          width: 100%;
+        }
+      }
+      div{
+        h3{
+          display: inline-block;
+          padding: 5px 20px;
+          margin-bottom: 20px;
+          font-size: 1.5em;
+          font-weight: 600;
+          border-radius: 5px;
+          color: #FFF;
+          background: var(--blue);
+        }
+        p{
+
+        }
+      }
+      @media screen and (min-width:800px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        figure{
+          width: 60%;
+        }
+        div{
+          width: 35%;
+        }
+        &:nth-child(odd){
+          flex-direction: row-reverse;
+          text-align: right;
+        }
+      }
+      @media screen and (max-width:800px) {
+        figure{
+          margin-bottom: 30px;
+        }
+      }
+    }
+    /* motion */
+    li{
+      &:nth-child(odd){
+        figure{
+          transform: translateX(100px);
+        }
+        div{
+          transform: translateX(-100px);
+        }
+      }
+      &:nth-child(even){
+        figure{
+          transform: translateX(-100px);
+        }
+        div{
+          transform: translateX(100px);
+        }
+      }
+      figure,div{
+        opacity: 0;
+        transition: transform 1s, opacity 1s;
+      }
+      &.active{
+        figure,div{
+          opacity: 1;
+        }
+        figure{
+          transform: translateX(0);
+        }
+        div{
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}

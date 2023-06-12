@@ -1,0 +1,54 @@
+@use 'mixin' as m;
+.comp-hourly{
+  .section-inner{
+    padding-top: 0 !important;
+    overflow: auto;
+    @media screen and (min-width:900px){
+      display: flex;
+      flex-direction: column;
+    }
+    h2{
+      position: sticky;
+      left: 0;
+    }
+    .wrap{
+      display: inline-table;
+      position: relative;
+      @media screen and (min-width:900px){
+        height: calc(100% - 25px);
+      }
+      @media screen and (max-width:900px){
+        height: 400px;
+      }
+      ul{
+        display: inline-flex;
+        height: 100%;
+        li{
+          padding-top: 20px;
+          width: 70px;
+          height: 100%;
+          box-sizing: border-box;
+          &:nth-child(even){
+            background: rgba(#fff,0.5);
+          }
+          p{
+            margin: 3px 0;
+            text-align: center;
+            font-size: 0.9em;
+            img{
+              display: inline-block;
+              width: 70%;
+            }
+          }
+        }
+      }
+      .chart-wrap{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: calc(100% - 30px);
+        height: 60%;
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+@use "mixin" as m;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: var(--header-height);
+  transition: background 1s;
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(95%, 1800px);
+    height: inherit;
+    margin: 0 auto;
+    h1 {
+      position: relative;
+      z-index: 1;
+      @media #{m.$minLg} {
+        width: 170px;
+      }
+      @media #{m.$maxLg} {
+        width: 130px;
+      }
+      img{
+        width: 100%;
+      }
+      a {
+        position: relative;
+        display: block;
+        width: 100%;
+        svg:first-child {
+          width: 100%;
+          * {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 1px;
+            transition: stroke 1s;
+          }
+        }
+        svg:last-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          * {
+            fill: none;
+            stroke: var(--dark-color);
+            stroke-width: 10px;
+            stroke-dasharray: 1;
+            animation: stroke 8s infinite linear alternate;
+            transition: stroke 1s;
+          }
+        }
+      }
+    }
+    .mbtn {
+      position: relative;
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+      span {
+        position: absolute;
+        left: 0px;
+        top: 19px;
+        display: block;
+        height: 2px;
+        background: var(--main-color);
+        transition: width 0.3s, margin-top 0.3s, transform 0.3s;
+        transition-delay: 0.3s, 0s, 0s;
+        &.bar1 {
+          margin-top: -5px;
+          width: 20px;
+        }
+        &.bar2 {
+          width: 30px;
+        }
+        &.bar3 {
+          margin-top: 5px;
+          width: 40px;
+        }
+      }
+      &:hover {
+        span {
+          width: 40px;
+          margin-top: 0;
+          transition-delay: 0s, 0.3s, 0s;
+        }
+      }
+      &.active {
+        span {
+          width: 40px;
+          margin-top: 0;
+          transition-delay: 0s, 0.3s, 0s;
+          &.bar1 {
+            transform: rotate(45deg);
+          }
+          &.bar2 {
+            opacity: 0;
+          }
+          &.bar3 {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      @media #{m.$minLg} {
+        display: none;
+      }
+    }
+  }
+
+  .gnb {
+    a {
+      text-transform: uppercase;
+      font-size: 0.85em;
+      font-weight: 600;
+      color: var(--dark-color);
+      transform: color 0.5s;
+      &:hover {
+        color: var(--main-color);
+      }
+      &.active {
+        padding: 5px;
+        background: var(--main-color);
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+    &.gnb-lg {
+      display: flex;
+      align-items: center;
+      @media #{m.$maxLg} {
+        display: none;
+      }
+      a {
+        margin-left: 20px;
+      }
+    }
+    &.gnb-sm {
+      display: none;
+      @media #{m.$minLg} {
+        display: none !important;
+      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-top: var(--header-height);
+      background: rgba(#fff, 0.9);
+      a {
+        display: block;
+        height: 45px;
+        padding: 0 20px;
+        line-height: 45px;
+        border-bottom: 1px solid #ccc;
+        &.active {
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+  > svg {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    transform: translateY(-17%);
+    @media #{m.$minLg} {
+      height: 30px;
+    }
+    @media #{m.$maxLg} {
+      height: 10px;
+    }
+    .line {
+      fill: rgba(#fff, 0);
+      transition: fill 1s;
+      stroke: rgba(m.$mainColor, 0);
+      stroke-width: 10px;
+      stroke-dasharray: 1;
+    }
+  }
+  &.active {
+    background: rgba(#fff, 0.9);
+    .center {
+      h1 {
+        a {
+          svg:first-child {
+            * {
+              stroke: var(--dark-color);
+            }
+          }
+          svg:last-child {
+            * {
+              stroke: var(--main-color);
+            }
+          }
+        }
+      }
+    }
+    > svg {
+      .line {
+        fill: rgba(#fff, 0.9);
+        stroke: rgba(m.$mainColor, 1);
+      }
+    }
+  }
+  .scrollspy {
+    @include m.posRT(fixed, 1%, 50%, 0, -50%);
+    width: 30px;
+    filter: drop-shadow(1px 1px 0 rgba(#fff,0.3));
+    svg{
+      width: 100%;
+      .curve{
+        fill: none;
+        stroke: var(--sub-color);
+        stroke-width: 3px;
+      }
+      .progress{
+        fill: none;
+        stroke: var(--main-color);
+        stroke-width: 5px;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 0.2;
+      }
+      .circle{
+        fill: var(--main-color);
+        offset-path: path("M37.5,25c50,50-50,50,0,100s-50,50,0,100s-50,50,0,100s-49.1,50,0,100");
+      }
+    }
+    @media #{m.$maxLg} {
+      display: none;
+    }
+  }
+}

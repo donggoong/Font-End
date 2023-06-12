@@ -1,0 +1,222 @@
+.sub-visual {
+  height: max(30vh, 200px);
+  background: #000;
+  position: relative;
+  /* figure Motion */
+}
+.sub-visual #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+.sub-visual .breadcrumb {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  z-index: 2;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #FFF;
+}
+.sub-visual .breadcrumb > * {
+  margin: 0 3px;
+}
+@media screen and (max-width:600px) {
+  .sub-visual .breadcrumb {
+    display: none;
+  }
+}
+.sub-visual figure {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+}
+.sub-visual figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  filter: brightness(0.5);
+}
+.sub-visual figure figcaption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 400px);
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 15px;
+  border-left: 3px solid var(--blue);
+}
+.sub-visual figure figcaption h6 {
+  display: inline-block;
+  padding: 3px 15px;
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: var(--blue);
+}
+.sub-visual figure {
+  display: none;
+}
+.sub-visual figure.active img {
+  transform: scale(1);
+}
+.sub-visual figure.active figcaption h6 {
+  position: relative;
+}
+.sub-visual figure.active figcaption p {
+  position: relative;
+}
+.sub-visual figure img {
+  transform: scale(1.2);
+  transition: transform 8s;
+}
+
+.snb {
+  height: 50px;
+  background-color: var(--dark);
+  background-image: url(../img/sub/pattern.png);
+  background-size: 3px;
+}
+.snb > div {
+  width: min(95%, 1200px);
+  height: inherit;
+  margin: 0 auto;
+}
+.snb > div > ul {
+  height: inherit;
+}
+.snb > div > ul > li {
+  display: none;
+  height: inherit;
+}
+.snb > div > ul > li.current-menu-parent {
+  display: block;
+}
+.snb > div > ul > li > a {
+  display: none;
+}
+.snb > div > ul > li > ul {
+  display: flex;
+  justify-content: center;
+  height: inherit;
+}
+.snb > div > ul > li > ul > li {
+  flex: 1;
+  max-width: 300px;
+  height: inherit;
+  border-right: 1px solid #fff;
+}
+.snb > div > ul > li > ul > li:last-child {
+  border-right: none;
+}
+.snb > div > ul > li > ul > li.current-post-parent > a {
+  color: #fff;
+  background: var(--orange);
+}
+.snb > div > ul > li > ul > li.current-post-parent > a:hover {
+  font-size: 1.5em;
+}
+.snb > div > ul > li > ul > li > a {
+  display: block;
+  padding: 0 15px;
+  height: inherit;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #fff;
+  background: var(--blue);
+  transition: font-size 0.3s;
+}
+.snb > div > ul > li > ul > li > a:hover {
+  font-size: 1.5em;
+}
+.snb > div > ul > li > ul > li > a[aria-current] {
+  color: #fff;
+  background: var(--orange);
+}
+
+main.sub-content {
+  width: min(95%, 1200px);
+  margin: 30px auto;
+}
+main.sub-content h2.sub-title {
+  position: relative;
+  text-align: center;
+  font-size: min(7vw, 2em);
+  font-weight: 500;
+  color: var(--blue);
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #CCC;
+  margin-bottom: 30px;
+}
+main.sub-content h2.sub-title::after {
+  content: "";
+  position: absolute;
+  top: 9%;
+  left: calc(50% - 25px);
+  margin: 0 auto;
+  width: 50px;
+  height: 3px;
+  background: var(--green);
+}
+main.sub-content h2.sub-title::first-letter {
+  font-size: 1.2em;
+  color: var(--orange);
+}
+main.sub-content .sub-desc {
+  position: relative;
+  width: min(90%, 500px);
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark);
+}
+main.sub-content .sub-desc b {
+  font-size: 1.2em;
+  color: var(--blue);
+}
+main.sub-content .sub-desc::before, main.sub-content .sub-desc::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--orange);
+}
+main.sub-content .sub-desc::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+main.sub-content .sub-desc::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.page-section .big {
+  font-size: 1.2em;
+}
+.page-section .big em {
+  color: var(--blue);
+  font-weight: 600;
+}/*# sourceMappingURL=sub.css.map */

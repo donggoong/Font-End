@@ -1,0 +1,235 @@
+body {
+  padding-top: var(--header-height);
+}
+body header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: var(--header-height);
+  transition: background 1s;
+}
+body header.active {
+  position: fixed;
+  top: -35px;
+  opacity: 0.7;
+}
+body header .top {
+  height: 35px;
+  width: 100%;
+  background: var(--blue);
+}
+body header .top ul {
+  margin: 0 auto;
+  width: min(95%, 1200px);
+  height: inherit;
+}
+body header .top ul li {
+  float: right;
+  border-left: 1px solid #FFF;
+  height: inherit;
+}
+body header .top ul li:last-of-type {
+  border: none;
+}
+body header .top ul li a {
+  display: block;
+  padding: 0 15px;
+  height: inherit;
+  font-size: 0.9em;
+  color: #FFF;
+  background: var(--dark);
+  line-height: 35px;
+  transition: all 0.3s;
+}
+body header .top ul li a:hover {
+  background: var(--orange);
+}
+body header .center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: min(90%, 1200px);
+  height: calc(100% - 35px);
+}
+body header .center h1 {
+  height: 70%;
+}
+body header .center h1 a img {
+  height: 100%;
+}
+body header .center .gnb.gnb-lg {
+  height: 45px;
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul {
+  display: flex;
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul > li {
+  position: relative;
+  height: 45px;
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul > li:hover > a {
+  color: var(--blue);
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul > li > a {
+  cursor: default;
+  display: block;
+  padding: 0 45px;
+  height: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #222;
+  transition: color 0.3s;
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul > li > ul {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  min-width: 100%;
+  display: none;
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul > li > ul > li > a {
+  display: block;
+  padding: 7px 10px;
+  text-align: center;
+  background: var(--blue);
+  color: #fff;
+  transition: background 0.3s;
+}
+body header .center .gnb.gnb-lg .menu-menu-container > ul > li > ul > li > a:hover {
+  background: var(--orange);
+}
+@media screen and (max-width:1000px) {
+  body header .center .gnb.gnb-lg {
+    display: none;
+  }
+}
+body header .center .gnb.gnb-sm {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width:1000px) {
+  body header .center .gnb.gnb-sm {
+    display: none !important;
+  }
+}
+body header .center .gnb.gnb-sm video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+body header .center .gnb.gnb-sm #particles-js-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+body header .center .gnb.gnb-sm h6 {
+  width: min(90%, 300px);
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  font-size: min(12vw, 3em);
+  text-transform: uppercase;
+}
+body header .center .gnb.gnb-sm > div {
+  width: min(90%, 300px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+body header .center .gnb.gnb-sm > div > ul > li > a {
+  display: block;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+body header .center .gnb.gnb-sm > div > ul > li > a::after {
+  content: "\f07b";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+body header .center .gnb.gnb-sm > div > ul > li > a::after {
+  float: right;
+}
+body header .center .gnb.gnb-sm > div > ul > li > a.active::after {
+  content: "\f07c";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+body header .center .gnb.gnb-sm > div > ul > li > ul {
+  display: none;
+}
+body header .center .gnb.gnb-sm > div > ul > li > ul > li > a {
+  display: block;
+  padding: 7px 10px;
+  color: #222;
+  border-bottom: 1px dotted #fff;
+  transition: color 0.3s;
+}
+body header .center .gnb.gnb-sm > div > ul > li > ul > li > a:hover {
+  color: var(--orange);
+}
+body header .center .gnb.gnb-sm .mbtn-close {
+  position: absolute;
+  right: 5%;
+  top: 3.7%;
+  color: #fff;
+}
+body header .center .gnb > div > ul > li.menu-item-147 {
+  display: none;
+}
+body header .center .mbtn {
+  height: 40px;
+  width: 40px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+@media screen and (min-width:1000px) {
+  body header .center .mbtn {
+    display: none;
+  }
+}
+body header .center .mbtn.mbtn-open {
+  color: var(--blue);
+}
+body header .center .mbtn:hover {
+  background: var(--blue);
+  color: #fff;
+  font-size: 1.3em;
+}/*# sourceMappingURL=header.css.map */

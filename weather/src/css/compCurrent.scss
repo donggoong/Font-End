@@ -1,0 +1,242 @@
+@use "mixin" as m;
+.comp-current {
+  @media screen and (max-width: 900px) {
+    margin-top: 20px !important;
+  }
+  .section-inner {
+    .current-output {
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+      @media screen and (min-width: 900px) {
+        height: 100%;
+      }
+      @media screen and (max-width: 900px) {
+        padding: 10px;
+      }
+      .reload{
+        position: absolute;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        top: 15%;
+        right: 2%;
+        font-size: 1.5em;
+        opacity: 0.7;
+        &:hover, &:active{
+          opacity: 1;
+          animation: sunRotate 2s infinite linear;
+        }
+      }
+      address {
+        display: flex;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        padding: 5px 10px;
+        width: min(90%, 350px);
+        overflow: hidden;
+        background: rgba(#000, 0.1);
+        span {
+          display: inline-block;
+          white-space: nowrap;
+          font-weight: 600;
+          font-size: 1.1em;
+          animation: marquee 10s linear infinite;
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        }
+      }
+      .circle-container {
+        @include m.square;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: min(85%, 300px);
+        background: rgba(#000, 0.2);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .sunset {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          svg {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            path {
+              fill: none;
+              &.line {
+                stroke: rgba(#fff, 0.5);
+                stroke-width: 3px;
+              }
+              &.dash {
+                stroke: url(#gradient);
+                stroke-width: 6px;
+                stroke-dasharray: 1;
+                stroke-dashoffset: 1;
+              }
+              &.sun {
+                fill: #ffb829;
+                offset-path: path(
+                  "M25,200c0-96.65,78.35-175,175-175s175,78.35,175,175"
+                );
+                animation: sunRotate 7s infinite linear;
+                @keyframes sunRotate {
+                  0% {
+                    transform: rotate(0);
+                  }
+                  100% {
+                    transform: rotate(360deg);
+                  }
+                }
+              }
+            }
+          }
+          time {
+            display: inline-block;
+            font-size: 0.8em;
+            padding: 3px 8px;
+            &.risetime {
+              float: left;
+              transform: translate(-30%,5%);
+            }
+            &.settime {
+              float: right;
+              transform: translate(30%,5%);
+            }
+          }
+        }
+        .circle-container-inner {
+          position: relative;
+          @include m.posLT(absolute, 50%, 50%, -50%, -50%);
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .temp {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            em {
+              position: relative;
+              z-index: 1;
+              margin-right: -60px;
+              font-size: 2.5em;
+              font-weight: 300;
+              text-shadow: 1px 1px 0 var(--deepblue);
+              sup {
+                font-size: 0.6em;
+              }
+            }
+            img {
+              width: 80px;
+              mask-image: url(../assets/img/mask.png);
+              mask-size: 100%;
+              mask-position: center;
+              mask-repeat: no-repeat;
+            }
+            span{
+              position: absolute;
+              transform: translate(40px, 10px);
+              i{
+                margin-right: 5px;
+                font-size: 0.5em;
+              }
+              b{
+                font-size: 0.7em;
+                sup{
+                  font-size: 0.5em;
+                }
+              }
+            }
+          }
+          .desc {
+            margin-top: -20px;
+            text-align: center;
+            font-size: 1.3em;
+          }
+          .etc {
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 3px auto;
+            width: 70%;
+            text-align: center;
+            background: rgba(#000, 0.3);
+            border-radius: 10px;
+            span {
+              display: inline-block;
+              margin: 2px 5px;
+              i {
+                margin-right: 3px;
+                font-size: 0.8em;
+                &.fa-location-arrow{
+                  font-size: 1em;
+                  margin-right: 5px;
+                }
+              }
+              b{
+                font-size: 1.1em;
+              }
+              small {
+                font-size: 0.8em;
+              }
+            }
+          }
+          .time-date{
+            text-align: center;
+            color: #FFF;
+            time{
+              display: block;
+              &.time{
+                font-size: 1.2em;
+                small{
+                  font-size: 0.7em;
+                }
+              }
+              &.date{
+                font-size: 0.9em;
+              }
+            }
+          }
+          figure {
+            position: absolute;
+            top: 42%;
+            width: 100%;
+            height: 20px;
+            img {
+              position: absolute;
+              width: 30px;
+              height: 100%;
+              &:first-child {
+                left: -4%;
+              }
+              &:last-child {
+                right: -4%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

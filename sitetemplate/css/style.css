@@ -1,0 +1,61 @@
+body {
+  color: #666;
+  text-decoration: none;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.serif {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+:root {
+  --main-color: #262A56;
+  --sub-color: #B8621B;
+  --point-color: #E3CCAE;
+  --dark-color: #1f1d1d;
+}
+
+.sub_title {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: var(--main-color);
+  padding-bottom: 13px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.emphasis {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.point {
+  color: var(--point-color);
+  font-weight: 800;
+}
+
+.sub_desc {
+  margin-bottom: 40px;
+
+}
+
+.sub_desc em{
+  display: block;
+}
+
+.site_guide {
+  position: relative;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #000;
+  color: #FFF;
+}
+.site_guide button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

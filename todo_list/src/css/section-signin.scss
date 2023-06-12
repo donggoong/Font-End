@@ -1,0 +1,59 @@
+@use "mixin" as m;
+.section-signin {
+  form {
+    width: 100%;
+    p {
+      &.email-wrap {
+        @include m.inputWrap(url("../assets/img/icons/icon-email.png"), true);
+      }
+      &.password-wrap {
+        @include m.inputWrap(url("../assets/img/icons/icon-key.png"), true);
+      }
+      &.btn-wrap {
+        @include m.inputWrap(none, false);
+        > img {
+          width: 100%;
+        }
+      }
+      &.remember-wrap {
+        padding: 10px 0;
+        border-top: 2px dotted var(--green);
+        label {
+          cursor: pointer;
+          img {
+            height: 30px;
+            margin: 0 auto;
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
+        input:checked + label {
+          img {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
+      &.password-email-wrap {
+        text-align: center;
+        button{
+          padding: 7px 15px;
+          background: var(--beige);
+          border: 1px dotted var(--orange);
+          &:hover,&:active{
+            background: #FFF;
+            animation: rubberBand .3s;
+          }
+          img {
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}

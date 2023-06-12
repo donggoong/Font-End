@@ -1,0 +1,132 @@
+html {
+  --orange: #e17332;
+  --green: #4fc962;
+  --red: #c91d1c;
+  --blue: #1bbae5;
+  --beige:#ffeb57;
+}
+
+body {
+  color: var(--orange);
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------- */
+#root {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/common/bg-pattern.jpg);
+}
+#root img.deco-top {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: min(80%, 550px);
+  mix-blend-mode: hard-light;
+  animation: updown 5s infinite linear alternate;
+}
+@keyframes updown {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -1%;
+  }
+}
+#root main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 500px);
+  height: min(80%, 700px);
+}
+#root main .main-bg {
+  position: absolute;
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, 0);
+  height: 103%;
+  width: 110%;
+}
+#root main h1 {
+  position: relative;
+}
+#root main h1 img {
+  width: 100%;
+}
+#root main article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+}
+#root main article section {
+  flex: 1 0 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+#root main article section h2 {
+  width: min(60%, 220px);
+}
+#root main article section h2 img {
+  width: 100%;
+}
+#root main article section .scroll-wrap {
+  overflow-y: auto;
+  flex: 1 0 1px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  width: 100%;
+}
+@media (hover: hover) {
+  #root main article section .scroll-wrap::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+  #root main article section .scroll-wrap::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
+  }
+  #root main article section .scroll-wrap::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #d62929;
+  }
+}
+#root footer {
+  position: fixed;
+  left: 50%;
+  bottom: 1%;
+  transform: translate(-50%, 0);
+  width: min(95%, 650px);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+#root footer img.gif {
+  width: min(60%, 150px);
+  margin: 0 auto;
+  margin-bottom: -10px;
+}
+#root footer img.pencil {
+  width: min(80%, 400px);
+  margin: 0 auto;
+}
+#root footer p {
+  text-align: center;
+  font-size: 0.9em;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #FFF;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-title {
+  border-bottom: 1px dotted #CCC;
+  padding: 20px 0;
+  background: var(--blue);
+  color: #FFF;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-title span {
+  display: block;
+  transform: scale(0.5);
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-body {
+  background: var(--dark);
+  color: #FFF;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-body .ewd-ufaq-faq-post {
+  padding: 20px 0;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-body .ewd-ufaq-faq-categories {
+  display: none;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-body .wp-block-heading {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--blue);
+  border-bottom: 1px dotted #FFF;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div .ewd-ufaq-faq-body p {
+  width: min(95%, 1200px);
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div.ewd-ufaq-post-active .ewd-ufaq-faq-title h4 {
+  color: var(--orange);
+  font-weight: 600;
+}
+.ewd-ufaq-faq-list .ewd-ufaq-faqs .ewd-ufaq-faq-div.ewd-ufaq-post-active .ewd-ufaq-faq-title span {
+  color: var(--orange);
+}/*# sourceMappingURL=ultimate-faqs.css.map */

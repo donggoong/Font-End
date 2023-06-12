@@ -1,0 +1,190 @@
+.section-home .scroll-wrap ul li {
+  opacity: 0;
+  animation: fadeIn 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section-home .scroll-wrap ul li:nth-child(even) {
+  background: rgba(255, 255, 255, 0.3);
+}
+.section-home .scroll-wrap ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 5px;
+  background-image: url(../assets/img/list/line-dashed.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+.section-home .scroll-wrap ul li a .thumbnail {
+  box-sizing: border-box;
+  margin-right: 10px;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  background: var(--orange);
+}
+.section-home .scroll-wrap ul li a .metabox {
+  width: calc(100% - 70px);
+}
+.section-home .scroll-wrap ul li a .metabox p {
+  display: flex;
+  width: 100%;
+}
+.section-home .scroll-wrap ul li a .metabox p > time, .section-home .scroll-wrap ul li a .metabox p em {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.section-home .scroll-wrap ul li a .metabox p > time img, .section-home .scroll-wrap ul li a .metabox p em img {
+  margin-right: 5px;
+}
+.section-home .scroll-wrap ul li a .metabox p time {
+  font-size: 0.9em;
+  letter-spacing: 0em;
+}
+.section-home .scroll-wrap ul li a .metabox p .date {
+  color: var(--green);
+}
+.section-home .scroll-wrap ul li a .metabox p .time {
+  color: var(--sky);
+}
+.section-home .scroll-wrap ul li a .metabox p .title {
+  display: block;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #000;
+}
+.section-home .scroll-wrap ul li a .metabox p .title img {
+  display: inline-block;
+}
+.section-home .scroll-wrap ul li a .more {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@media screen and (max-width:600px) {
+  .section-home .scroll-wrap ul li a .more {
+    display: none;
+  }
+}
+.section-home .scroll-wrap ul li a:hover {
+  background-color: var(--beige);
+}
+.section-home .scroll-wrap .scroll-trigger {
+  height: 50px;
+}
+.section-home .add-btn.wrap {
+  position: relative;
+  margin: 10px 0;
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio]), .section-home .add-btn.wrap textarea {
+  display: block;
+  outline: none;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border: 1px dotted var(--orange);
+  background: var(--beige);
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio])[type=date]::-webkit-calendar-picker-indicator, .section-home .add-btn.wrap input:not([type=checkbox], [type=radio])[type=time]::-webkit-calendar-picker-indicator, .section-home .add-btn.wrap textarea[type=date]::-webkit-calendar-picker-indicator, .section-home .add-btn.wrap textarea[type=time]::-webkit-calendar-picker-indicator {
+  width: 25px;
+  height: 25px;
+  background-image: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio])::-moz-placeholder, .section-home .add-btn.wrap textarea::-moz-placeholder {
+  color: #f3b455;
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio])::placeholder, .section-home .add-btn.wrap textarea::placeholder {
+  color: #f3b455;
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio]):focus, .section-home .add-btn.wrap textarea:focus {
+  background: #FFF;
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio])[type=file] + label, .section-home .add-btn.wrap textarea[type=file] + label {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--orange);
+  border: 1px dotted var(--orange);
+  background: var(--beige);
+}
+.section-home .add-btn.wrap input:not([type=checkbox], [type=radio])[type=file] + label:hover, .section-home .add-btn.wrap input:not([type=checkbox], [type=radio])[type=file] + label:active, .section-home .add-btn.wrap textarea[type=file] + label:hover, .section-home .add-btn.wrap textarea[type=file] + label:active {
+  background: #FFF;
+  color: var(--orange);
+}
+.section-home .add-btn.wrap textarea {
+  display: block;
+  height: 200px;
+  resize: none;
+}
+@media (hover: hover) {
+  .section-home .add-btn.wrap textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+  .section-home .add-btn.wrap textarea::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f5f5;
+  }
+  .section-home .add-btn.wrap textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #8bd629;
+  }
+}
+.section-home .add-btn.wrap button, .section-home .add-btn.wrap a {
+  display: block;
+  margin: 0 auto;
+}
+.section-home .add-btn.wrap button:active, .section-home .add-btn.wrap a:active {
+  animation: rubberBand 0.3s;
+}
+.section-home .add-btn.wrap button img, .section-home .add-btn.wrap a img {
+  height: 50px;
+}
+@keyframes rubberBand {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}/*# sourceMappingURL=section-home.css.map */

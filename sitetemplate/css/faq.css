@@ -1,0 +1,33 @@
+.faq_list li button{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  background: var(--main-color);
+}
+
+.faq_list li button::after{
+  content: "\2b";
+  float: right;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+}
+.faq_list li button.active{
+  background: var(--point-color);
+}
+
+.faq_list li button.active::after{
+  content: "\f068";
+}
+
+.faq_list li p {
+  display: none;
+  padding: 10px;
+  background: #EEE;
+}

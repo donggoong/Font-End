@@ -1,0 +1,115 @@
+@use "mixin" as m;
+.section5 {
+  article {
+    height: calc(100vh - var(--header-height));
+    &.bg {
+      position: sticky;
+      top: var(--header-height);
+      img {
+        @include m.objectFit(cover);
+      }
+      video {
+        position: absolute;
+        top: 0;
+        @include m.objectFit(cover);
+        mix-blend-mode: screen;
+      }
+    }
+    &.earth {
+      position: sticky;
+      top: var(--header-height);
+      mix-blend-mode: overlay;
+      figure {
+        @include m.posLT(absolute, 50%, 50%, -50%, -50%);
+        width: min(90%, 600px);
+        img {
+          width: 100%;
+          &.dummy {
+            opacity: 0;
+          }
+          &.img {
+            position: absolute;
+            top: 0;
+          }
+        }
+      }
+    }
+    &.progress {
+      position: sticky;
+      top: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          position: relative;
+          box-sizing: border-box;
+          padding: 10px;
+          max-width: 330px;
+          svg{
+            width: 100%;
+            .poly-circle{
+              fill: rgba(#FFF,0.3);
+              stroke: var(--main-color);
+              stroke-width: 7px;
+            }
+            .circle{
+              fill: rgba(#FFF,0.8);
+            }
+            .progress{
+              fill: none;
+              stroke: var(--main-color);
+              stroke-width: 15px;
+              stroke-dasharray: 1;
+              stroke-dashoffset: 1;
+              transform-origin: center;
+              transform: rotate(-90deg);
+              transition: stroke-dashoffset 2s
+            }
+          }
+          .textbox{
+            @include m.posLT(absolute,50%,50%,-50%,-50%);
+            text-align: center;
+            i{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              line-height: 40px;
+              color: #FFF;
+              background: #2b0609;
+            }
+            h3{
+              margin: 5px 0;
+              color: #2b0609;
+              font-weight: 600;
+              font-size: min(3.5vw,1.2em);
+              text-shadow: 1px 1px 0 #666;
+            }
+            b{
+              line-height: 0.7em;
+              font-size: min(7vw,3.5em);
+              font-weight: 700;
+              color: #2b0609;
+              text-shadow: 1px 2px 0 #666;
+            }
+          }
+          @media #{m.$minLg} {
+            width: 25%;
+          }
+          @media #{m.$maxLg} {
+            width: 50%;
+          }
+          &.active .progress{
+            stroke-dashoffset:0
+          }
+        }
+      }
+    }
+  }
+  .dummy-scroll {
+    height: calc(100vh - var(--header-height));
+  }
+}

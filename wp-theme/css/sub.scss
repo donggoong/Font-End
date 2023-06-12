@@ -1,0 +1,221 @@
+@use "./mixin" as m;
+.sub-visual {
+  height: max(30vh, 200px);
+  background: #000;
+  position: relative;
+  #particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+  }
+  .breadcrumb{
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    z-index: 2;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    color: #FFF;
+    >*{
+      margin: 0 3px;
+    }
+    @media #{m.$maxSm}{
+      display: none;
+    }
+  }
+  figure {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    img {
+      @include m.objectFit(cover);
+      filter: brightness(.5)
+    }
+    figcaption {
+      @include m.posLT(absolute, 50%, 50%, -50%, -50%);
+      width: min(90%, 400px);
+      color: #fff;
+      box-sizing: border-box;
+      padding-left: 15px;
+      border-left: 3px solid var(--blue);
+      h6 {
+        display: inline-block;
+        padding: 3px 15px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+        border-radius: 5px;
+        background: var(--blue);
+      }
+      p {
+      }
+    }
+  }
+  /* figure Motion */
+  figure {
+    display: none;
+    &.active{
+      img {
+        transform: scale(1);
+      }
+      figcaption {
+        h6 {
+          position: relative;
+        }
+        p {
+          position: relative;
+        }
+      }
+    }
+    img {
+      transform: scale(1.2);
+      transition: transform 8s;
+    }
+  }
+}
+.snb {
+  height: 50px;
+  background-color: var(--dark);
+  background-image: url(../img/sub/pattern.png);
+  background-size: 3px;
+  > div {
+    width: min(95%, 1200px);
+    height: inherit;
+    margin: 0 auto;
+    > ul {
+      height: inherit;
+      > li {
+        display: none;
+        height: inherit;
+        &.current-menu-parent {
+          display: block;
+        }
+        > a {
+          display: none;
+        }
+        > ul {
+          display: flex;
+          justify-content: center;
+          height: inherit;
+          > li {
+            flex: 1;
+            max-width: 300px;
+            height: inherit;
+            border-right: 1px solid #fff;
+            &:last-child {
+              border-right: none;
+            }
+            &.current-post-parent{
+              >a{
+                color: #fff;
+                background: var(--orange);
+                &:hover {
+                  font-size: 1.5em;
+                }
+              }
+            }
+            > a {
+              display: block;
+              padding: 0 15px;
+              height: inherit;
+              text-align: center;
+              line-height: 50px;
+              font-size: 1.3em;
+              font-weight: 600;
+              @include m.ellipse;
+              color: #fff;
+              background: var(--blue);
+              transition: font-size 0.3s;
+              &:hover {
+                font-size: 1.5em;
+              }
+              &[aria-current] {
+                color: #fff;
+                background: var(--orange);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+main.sub-content {
+  width: min(95%, 1200px);
+  margin: 30px auto;
+  h2.sub-title{
+    position: relative;
+    text-align: center;
+    font-size: min(7vw, 2em);
+    font-weight: 500;
+    color: var(--blue);
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #CCC;
+    margin-bottom: 30px;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 9%;
+      left: calc(50% - 25px);
+      margin: 0 auto;
+      width: 50px;
+      height: 3px;
+      background: var(--green);
+    }
+    &::first-letter{
+      font-size: 1.2em;
+      color: var(--orange);
+    }
+  }
+  .sub-desc{
+    position: relative;
+    width: min(90%, 500px);
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    color: var(--dark);
+
+    b{
+        font-size: 1.2em;
+        color: var(--blue);
+    }
+
+    &::before,&::after{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border: 3px solid var(--orange);
+    }
+    &::before{
+      top: 0;
+      left: 0;
+      border-right: none;
+      border-bottom: none;
+    }
+    &::after{
+      bottom: 0;
+      right: 0;
+      border-left: none;
+      border-top: none;
+    }
+  }
+}
+
+.page-section{
+  .big{
+    font-size: 1.2em;
+    em{
+      color: var(--blue);
+      font-weight: 600;
+    }
+  }
+}

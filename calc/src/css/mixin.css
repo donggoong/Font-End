@@ -1,0 +1,11 @@
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=mixin.css.map */

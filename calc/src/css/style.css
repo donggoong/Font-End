@@ -1,0 +1,107 @@
+body {
+  color: #666;
+  font-family: "Orbitron", "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  background-size: 10px, 100%;
+}
+body.gray {
+  background-image: url(../assets/img/pattern2.png), linear-gradient(#e9e9e9, #cecece);
+}
+body.gray #root {
+  background: linear-gradient(#e9e9e9, #cecece);
+  color: #999;
+}
+@media (hover: hover) {
+  body.gray #root article.dday-list ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #a5a5a5), color-stop(0.72, #949494), color-stop(0.86, #6e6e6e));
+  }
+}
+body.beige {
+  background-image: url(../assets/img/pattern3.png), linear-gradient(rgb(248, 248, 239), rgb(240, 240, 205));
+}
+body.beige #root {
+  background: linear-gradient(rgb(248, 248, 239), rgb(240, 240, 205));
+  color: rgb(204, 188, 98);
+}
+@media (hover: hover) {
+  body.beige #root article.dday-list ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #ffc293), color-stop(0.72, #ffb379), color-stop(0.86, #ffaf69));
+  }
+}
+body.skyblue {
+  background-image: url(../assets/img/pattern4.png), linear-gradient(#e3f1ff, #b8d9ff);
+}
+body.skyblue #root {
+  background: linear-gradient(#e3f1ff, #b8d9ff);
+  color: #488fd7;
+}
+@media (hover: hover) {
+  body.skyblue #root article.dday-list ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #8ec6ff), color-stop(0.72, #75b8ff), color-stop(0.86, #59a7ff));
+  }
+}
+body #root {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(95%, 500px);
+  height: min(95%, 800px);
+  overflow: hidden;
+  overflow-y: auto;
+  box-shadow: -2px -2px 5px rgb(255, 255, 255), 3px 3px 5px rgba(0, 0, 0, 0.1);
+  /* scrollbar style */
+}
+@media (hover: hover) {
+  body #root article.dday-list ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  body #root article.dday-list ul::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+  body #root article.dday-list ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122, 153, 217)), color-stop(0.72, rgb(73, 125, 189)), color-stop(0.86, rgb(28, 58, 148)));
+  }
+}
+body #root section {
+  min-height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+body #root section h1,
+body #root section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 1.6em;
+  text-shadow: -2px -2px 1px rgb(255, 255, 255), 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+body #root .back-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5em;
+}
+body #root .back-btn:hover {
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=style.css.map */

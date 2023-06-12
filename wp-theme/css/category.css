@@ -1,0 +1,188 @@
+.category-gallery-section ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-gallery-section ul li {
+  padding: 5px;
+  box-sizing: border-box;
+}
+.category-gallery-section ul li a {
+  display: block;
+  padding: 5px;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+.category-gallery-section ul li a figure {
+  margin: 0;
+  overflow: hidden;
+}
+.category-gallery-section ul li a figure img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s, filter 0.5s;
+  transform: scale(1.1);
+}
+.category-gallery-section ul li a figure figcaption {
+  position: relative;
+  padding: 10px;
+  background: var(--dark);
+  transition: background 0.3s;
+}
+.category-gallery-section ul li a figure figcaption h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+.category-gallery-section ul li a figure figcaption p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.category-gallery-section ul li a:hover figure img {
+  transform: scale(1.2);
+  filter: url(#filter);
+  transition: transform 10s;
+}
+.category-gallery-section ul li a:hover figure figcaption {
+  background: var(--blue);
+}
+@media screen and (min-width:1000px) {
+  .category-gallery-section ul li {
+    width: 33.33%;
+  }
+}
+@media screen and (min-width:600px) and (max-width:1000px) {
+  .category-gallery-section ul li {
+    width: 50%;
+  }
+}
+@media screen and (max-width:600px) {
+  .category-gallery-section ul li {
+    width: 100%;
+  }
+}
+
+.category-webzin-section ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category-webzin-section ul li {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.category-webzin-section ul li div.meta {
+  padding: 7px;
+  border-top: 1px solid #999;
+  color: #FFF;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  background: var(--blue);
+}
+.category-webzin-section ul li div.meta > * {
+  display: inline-block;
+}
+.category-webzin-section ul li div.meta address {
+  margin-right: 5px;
+  font-weight: 800;
+}
+.category-webzin-section ul li div.meta b {
+  float: right;
+}
+.category-webzin-section ul li figure {
+  overflow: hidden;
+  border: 10px solid var(--blue);
+  box-sizing: border-box;
+  margin: 0;
+}
+.category-webzin-section ul li figure img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.05);
+  transition: all 1s;
+}
+.category-webzin-section ul li div.textbox h3 {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.category-webzin-section ul li div.textbox p {
+  margin: 10px 0;
+}
+.category-webzin-section ul li div.textbox a {
+  float: right;
+  padding: 7px 15px;
+  font-size: 0.9em;
+  color: var(--blue);
+  background: #FFF;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+}
+.category-webzin-section ul li div.textbox a:hover {
+  background: var(--blue);
+  color: #FFF;
+}
+.category-webzin-section ul li div.textbox::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.category-webzin-section ul li:hover figure img {
+  filter: url(#filter);
+  transform: scale(1.2);
+  transition: 10s;
+}
+@media screen and (min-width:1000px) {
+  .category-webzin-section ul li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  .category-webzin-section ul li div.meta {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .category-webzin-section ul li figure {
+    width: 40%;
+    margin-right: 30px;
+  }
+  .category-webzin-section ul li div.textbox {
+    flex: 1;
+  }
+}
+@media screen and (min-width:600px) and (max-width:1000px) {
+  .category-webzin-section ul li {
+    width: 50%;
+  }
+}
+@media screen and (max-width:600px) {
+  .category-webzin-section ul li {
+    width: 100%;
+  }
+}
+@media screen and (max-width:1000px) {
+  .category-webzin-section ul li div.textbox {
+    padding: 10px;
+    color: #FFF;
+    background: var(--dark);
+  }
+}
+
+ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px dotted rgba(204, 204, 204, 0.8);
+}
+ul.page-numbers li {
+  margin: 0 5px;
+}
+ul.page-numbers li a.page-numbers:hover {
+  color: var(--blue);
+}
+ul.page-numbers li span[aria-current=page] {
+  color: var(--orange);
+  font-weight: 600;
+}/*# sourceMappingURL=category.css.map */

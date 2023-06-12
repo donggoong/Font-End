@@ -1,0 +1,252 @@
+@media screen and (max-width: 900px) {
+  .comp-current {
+    margin-top: 20px !important;
+  }
+}
+.comp-current .section-inner .current-output {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 900px) {
+  .comp-current .section-inner .current-output {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .comp-current .section-inner .current-output {
+    padding: 10px;
+  }
+}
+.comp-current .section-inner .current-output .reload {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  top: 15%;
+  right: 2%;
+  font-size: 1.5em;
+  opacity: 0.7;
+}
+.comp-current .section-inner .current-output .reload:hover, .comp-current .section-inner .current-output .reload:active {
+  opacity: 1;
+  animation: sunRotate 2s infinite linear;
+}
+.comp-current .section-inner .current-output address {
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  width: min(90%, 350px);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+.comp-current .section-inner .current-output address span {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1.1em;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.comp-current .section-inner .current-output .circle-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: min(85%, 300px);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.comp-current .section-inner .current-output .circle-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.comp-current .section-inner .current-output .circle-container .sunset {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.comp-current .section-inner .current-output .circle-container .sunset svg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.comp-current .section-inner .current-output .circle-container .sunset svg path {
+  fill: none;
+}
+.comp-current .section-inner .current-output .circle-container .sunset svg path.line {
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 3px;
+}
+.comp-current .section-inner .current-output .circle-container .sunset svg path.dash {
+  stroke: url(#gradient);
+  stroke-width: 6px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.comp-current .section-inner .current-output .circle-container .sunset svg path.sun {
+  fill: #ffb829;
+  offset-path: path("M25,200c0-96.65,78.35-175,175-175s175,78.35,175,175");
+  animation: sunRotate 7s infinite linear;
+}
+@keyframes sunRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.comp-current .section-inner .current-output .circle-container .sunset time {
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 3px 8px;
+}
+.comp-current .section-inner .current-output .circle-container .sunset time.risetime {
+  float: left;
+  transform: translate(-30%, 5%);
+}
+.comp-current .section-inner .current-output .circle-container .sunset time.settime {
+  float: right;
+  transform: translate(30%, 5%);
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp em {
+  position: relative;
+  z-index: 1;
+  margin-right: -60px;
+  font-size: 2.5em;
+  font-weight: 300;
+  text-shadow: 1px 1px 0 var(--deepblue);
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp em sup {
+  font-size: 0.6em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp img {
+  width: 80px;
+  -webkit-mask-image: url(../assets/img/mask.png);
+          mask-image: url(../assets/img/mask.png);
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp span {
+  position: absolute;
+  transform: translate(40px, 10px);
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp span i {
+  margin-right: 5px;
+  font-size: 0.5em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp span b {
+  font-size: 0.7em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .temp span b sup {
+  font-size: 0.5em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .desc {
+  margin-top: -20px;
+  text-align: center;
+  font-size: 1.3em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .etc {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 3px auto;
+  width: 70%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .etc span {
+  display: inline-block;
+  margin: 2px 5px;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .etc span i {
+  margin-right: 3px;
+  font-size: 0.8em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .etc span i.fa-location-arrow {
+  font-size: 1em;
+  margin-right: 5px;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .etc span b {
+  font-size: 1.1em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .etc span small {
+  font-size: 0.8em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .time-date {
+  text-align: center;
+  color: #FFF;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .time-date time {
+  display: block;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .time-date time.time {
+  font-size: 1.2em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .time-date time.time small {
+  font-size: 0.7em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner .time-date time.date {
+  font-size: 0.9em;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner figure {
+  position: absolute;
+  top: 42%;
+  width: 100%;
+  height: 20px;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner figure img {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner figure img:first-child {
+  left: -4%;
+}
+.comp-current .section-inner .current-output .circle-container .circle-container-inner figure img:last-child {
+  right: -4%;
+}/*# sourceMappingURL=compCurrent.css.map */
