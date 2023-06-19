@@ -18,7 +18,7 @@ React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
 
 
 ## 📌 주요 기능
-#### 로그인 - <a href="https://github.com/chaehyuenwoo/SpringBoot-Project-MEGABOX/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(Login)" >상세보기 - WIKI 이동</a>
+#### 로그인 - <a href="https://github.com/donggoong/Front-End.wiki.git" >상세보기 - WIKI 이동</a>
 - Firebase Authentication을 이용하여 사용자 로그인 기능 구현
 - 회원정보 업데이트
 - 기억하기 체크 시 인증 상태 localStorage 저장
