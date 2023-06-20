@@ -24,4 +24,4 @@ GoogleMap API와 Weather API를 이용하여 개발한 날씨정보 웹사이트
   - 이미지와 차트 플러그인을 이용하여 시간별 날씨정보를 나타냄  
 #### Daily
   - 일별 날씨정보를 나타냄
-  - jQuery의 SlideToggle 메서드를 이용하여 클릭 시 자세한 날씨 정보를 알려줌
+  - jQuery의 SlideToggle 메서드를 이용하여 클릭 시 자세한 날씨 정보를 알려드립니다.
