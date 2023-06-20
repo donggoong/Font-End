@@ -12,7 +12,7 @@ GoogleMap API와 Weather API를 이용하여 개발한 날씨정보 웹사이트
 [![todolist](https://file.notion.so/f/s/38f88d90-ed02-4d21-b710-dc343f8fa0f1/weather.gif?id=9930268c-33cd-435e-acc6-6d266501c41a&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687329307923&signature=kAyLRvSo4idY5CgWnm1diEFaP3FDLoku6BzD1Nr6ZoE)](https://donggoong.github.io/weather)
 
 ### ⚙️ 개발 환경
-- <img valign="middle" src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.Js&logoColor=white">
+- <img valign="middle" src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.Js&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=Chart.js&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white">
 - **Framework** : <img valign="middle" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
 
 ## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/Weather" >상세보기 - WIKI 이동</a>
