@@ -8,7 +8,7 @@ React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
 ## 🕰️ 개발 기간
 * 2023.06.04 - 2023.06.15
 
-### 🖼️ 미리 보기
+### 🖼️ 미리 보기(이미지 클릭시 프로젝트 사이트로 이동합니다.)
 [![todolist](https://file.notion.so/f/s/f5b1c8e6-b9c8-49d5-b8fa-d282d1af09a8/todolist.gif?id=b074281b-99e6-4631-9338-13f4d2d39966&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687322853551&signature=GjPkD97o0Ie8nGp9JWtjcd2oRO4u_PIvtCw8ZXe6RO0)](https://todo-app-926dd.firebaseapp.com)
 
 ### ⚙️ 개발 환경
