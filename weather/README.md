@@ -15,7 +15,7 @@ GoogleMap API와 Weather API를 이용하여 개발한 날씨정보 웹사이트
 - <img valign="middle" src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.Js&logoColor=white">
 - **Framework** : <img valign="middle" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
 
-## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/To-Do-List" >상세보기 - WIKI 이동</a>
+## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/Weather" >상세보기 - WIKI 이동</a>
 #### Map
   - Geolocation API로 현재위치의 위경도를 이용하여 GoogleMap API로 구글맵 출력
 #### Current
