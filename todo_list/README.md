@@ -17,7 +17,7 @@ React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
 - **Database** : <img valign="middle" src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white">
 
 
-## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/To-Do-List---Login#-login" >상세보기 - WIKI 이동</a>
+## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/To-Do-List" >상세보기 - WIKI 이동</a>
 #### 로그인
 - Firebase Authentication을 이용하여 사용자 로그인 기능 구현
 - 회원정보 업데이트
