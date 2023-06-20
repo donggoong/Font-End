@@ -2,7 +2,7 @@
 개인프로젝트
 
 ## 🖥️ 프로젝트 소개
-React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
+React와 firebase를 연동하여 개발한 To-Do List SPA 사이트입니다.
 <br>
 
 ## 🕰️ 개발 기간
