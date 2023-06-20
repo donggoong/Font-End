@@ -9,7 +9,7 @@ React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
 * 2023.06.04 - 2023.06.15
 
 ### 🖼️ 미리 보기
-[![todolist](https://www.notion.so/11d435a851a54b779e99e5be46b56c6b?pvs=4#b074281b99e64631933813f4d2d39966)](https://todo-app-926dd.firebaseapp.com)
+[![todolist](https://file.notion.so/f/s/f5b1c8e6-b9c8-49d5-b8fa-d282d1af09a8/todolist.gif?id=b074281b-99e6-4631-9338-13f4d2d39966&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687322853551&signature=GjPkD97o0Ie8nGp9JWtjcd2oRO4u_PIvtCw8ZXe6RO0)](https://todo-app-926dd.firebaseapp.com)
 
 ### ⚙️ 개발 환경
 - <img valign="middle" src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.Js&logoColor=white">
