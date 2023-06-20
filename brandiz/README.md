@@ -1,52 +1,21 @@
-# To-Do List
+# One Page Renewal
 개인프로젝트
 
 ## 🖥️ 프로젝트 소개
-React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
+원페이지 유형의 웹사이트를 레퍼런스로 참고하여 리뉴얼해서 디자인한 반응형 사이트입니다.
 <br>
 
 ## 🕰️ 개발 기간
-* 2023.06.04 - 2023.06.15
+* 2023.04.17 - 2023.04.27
 
 ### 🖼️ 미리 보기(이미지 클릭시 프로젝트 사이트로 이동합니다.)
-[![todolist](https://file.notion.so/f/s/f5b1c8e6-b9c8-49d5-b8fa-d282d1af09a8/todolist.gif?id=b074281b-99e6-4631-9338-13f4d2d39966&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687322853551&signature=GjPkD97o0Ie8nGp9JWtjcd2oRO4u_PIvtCw8ZXe6RO0)](https://todo-app-926dd.firebaseapp.com)
+[![todolist](https://file.notion.so/f/s/8c2d863c-0adc-40cf-9e0a-ece14df5059d/brandiz.gif?id=4dd40be8-2bae-4e42-be4f-54e874ddd93a&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687365543367&signature=JeHug4nquvoe6DxjsreQaSQSbzW9OwdY7eJ2XBKZzj8)](http://goongdoong.dothome.co.kr/brandiz)
 
 ### ⚙️ 개발 환경
-- <img valign="middle" src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.Js&logoColor=white">
-- **Framework** : <img valign="middle" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
-- **Database** : <img valign="middle" src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white">
+- <img valign="middle" src="https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=XAMPP&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white">
 
-
-## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/To-Do-List" >상세보기 - WIKI 이동</a>
-#### 로그인
-- Firebase Authentication을 이용하여 사용자 로그인 기능 구현
-- 회원정보 업데이트
-- 기억하기 체크 시 인증 상태 localStorage 저장
-- 비밀번호 재설정 기능
-#### 회원 가입
-- 사용자 등록
-- 사용자 정보 업데이트
-- 이메일 인증
-#### 회원 탈퇴
-- Cloud Firestore안에 있는 모든 문서 삭제
-- Storage안에 있는 모든 파일 삭제
-
-#### 일정 추가
-- 날짜 지정
-- 시간 선택
-- 일정명, 일정내용 입력
-- 이미지 업로드
-- 일정 등록
-#### 일정 수정
-- Cloud Firestore 컬렉션내 문서 값 수정
-#### 일정 삭제
-- Cloud Firestore 컬렉션내 해당 문서 삭제
-#### 일정 검색
-- 일정 검색
-#### 일정 완료 처리
-- 일정 완료
-
-#### Firebase Hosting & Deploy 
-- Hosting
-- Deploy
-
+## 📌 주요 기능
+#### 자바스크립트 플러그인으로 다양한 시각적 디자인 요소 추가
+- morphsvg.js (SVG 애니메이션 효과)
+- jquery.ripples.js (마우스 위치 좌표에 따른 애니메이션 효과)
+- smoothScroll.js (스크롤링 동작을 부드럽게 만들어주는 효과)
