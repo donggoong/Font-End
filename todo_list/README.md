@@ -17,33 +17,33 @@ React와 firebase를 연동하여 구축한 To-Do List SPA 사이트입니다.
 - **Database** : <img valign="middle" src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white">
 
 
-## 📌 주요 기능
-#### 로그인 - <a href="https://github.com/donggoong/Front-End/wiki/To-Do-List---Login#-login" >상세보기 - WIKI 이동</a>
+## 📌 주요 기능 - <a href="https://github.com/donggoong/Front-End/wiki/To-Do-List---Login#-login" >상세보기 - WIKI 이동</a>
+#### 로그인
 - Firebase Authentication을 이용하여 사용자 로그인 기능 구현
 - 회원정보 업데이트
 - 기억하기 체크 시 인증 상태 localStorage 저장
 - 비밀번호 재설정 기능
-#### 회원 가입 - 
+#### 회원 가입
 - 사용자 등록
 - 사용자 정보 업데이트
 - 이메일 인증
-#### 회원 탈퇴 - 
+#### 회원 탈퇴
 - Cloud Firestore안에 있는 모든 문서 삭제
 - Storage안에 있는 모든 파일 삭제
 
-#### 일정 추가 - 
+#### 일정 추가
 - 날짜 지정
 - 시간 선택
 - 일정명, 일정내용 입력
 - 이미지 업로드
 - 일정 등록
-#### 일정 수정 - 
+#### 일정 수정
 - Cloud Firestore 컬렉션내 문서 값 수정
-#### 일정 삭제- 
+#### 일정 삭제
 - Cloud Firestore 컬렉션내 해당 문서 삭제
-#### 일정 검색- 
+#### 일정 검색
 - 일정 검색
-#### 일정 완료 처리- 
+#### 일정 완료 처리
 - 일정 완료
 
 #### Firebase Hosting & Deploy 
