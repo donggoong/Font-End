@@ -2,7 +2,7 @@
 개인프로젝트
 
 ## 🖥️ 프로젝트 소개
-GoogleMap API와 Weather API를 이용하여 개발한 날씨정보 웹사이트 입니다. 
+GoogleMap API와 Weather API를 이용하여 구축한 Weather SPA 웹사이트 입니다. 
 <br>
 
 ## 🕰️ 개발 기간
