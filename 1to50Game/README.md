@@ -1,7 +1,6 @@
 # 1 to 50 Game
 ## 🔧 개발일지
-<details>
-<summary>📅 2023.06.26</summary>
+### 📅 2023.06.26
 
   <blockquote>
   <details>
@@ -143,4 +142,3 @@
   </blockquote>
   </details>
   </blockquote>
-</details>
