@@ -1,0 +1,130 @@
+body {
+  color: #666;
+  font-family: "Raleway", "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  background: #000;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 10px;
+  width: min(100%, 450px);
+  height: min(100%, 700px);
+  min-height: 650px;
+  background: #fff;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main section.active {
+  animation: jello 1s;
+}
+main section .ui {
+  text-align: center;
+}
+main section .ui .wrap-bottom {
+  display: flex;
+  align-items: center;
+}
+main section .ui .wrap-bottom .next-number {
+  width: 30%;
+  height: 100px;
+  line-height: 100px;
+  font-size: 5em;
+  font-weight: 600;
+  color: blue;
+}
+main section .ui .wrap-bottom .wrap-right {
+  flex: 1;
+}
+main section .ui .wrap-bottom .wrap-right .btn-restart {
+  width: 100%;
+  height: 50px;
+}
+main section .ui .wrap-bottom .wrap-right .sec {
+  margin-top: 10px;
+  font-size: 2em;
+  color: red;
+}
+main section .board {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section .board button {
+  position: relative;
+  box-sizing: border-box;
+  width: 20%;
+  background: brown;
+  border: 1px solid #000;
+}
+main section .board button::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+main section .board button:disabled {
+  cursor: none;
+  opacity: 0.5;
+}
+main section .board button span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #fff;
+}
+main section .init {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+}
+main section .init .btn-start {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 2em;
+  background: #000;
+  transform: translate(-50%, -50%);
+}
+main section .game-over {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+}
+main section .game-over p {
+  color: red;
+  font-size: 2em;
+}
+main section .game-over .btn-again {
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+  background: red;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
