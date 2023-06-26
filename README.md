@@ -1,2 +1,1 @@
-# Front-End
-Font-End PortFolio Code
+# 각 폴더를 들어가시면 상세 Readme가 작성되어있습니다.
