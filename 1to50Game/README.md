@@ -44,7 +44,7 @@
     /* 버튼 배열 생성 */
     window.fnSetArr = function(start,end){
       btnArr = [] // 빈 배열생성
-      for(let i = start; i<=end; i++){ // 첫 출력은 1 ~ 25를 파라미터로 받는다.
+      for(let i = start; i<=end; i++){ // 첫 출력은 1 ~ 25, 두번째 출력은 26 ~ 50을 파라미터로 받는다.
         let button = document.createElement('button')
         button.value = i
         button.innerHTML=`<span>${i}</span>`
