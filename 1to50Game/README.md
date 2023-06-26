@@ -2,41 +2,40 @@
 ## 🔧 개발일지
 ### 📅 2023.06.26
 
-  <blockquote>
-  <details>
-    <summary>초기 DOM 구조 구성</summary>
+<details>
+  <summary>초기 DOM 구조 구성</summary>
 
-  ```html
-  <main>
-    <section>
-      <div class="ui">
-        <h1>1 to 50</h1>
-        <div class="wrap-bottom">
-          <b class="next-number"></b>
-          <div class="wrap-right">
-            <button class="btn-restart">restart</button>
-            <em class="sec">15.5</em>
-          </div>
+```html
+<main>
+  <section>
+    <div class="ui">
+      <h1>1 to 50</h1>
+      <div class="wrap-bottom">
+        <b class="next-number"></b>
+        <div class="wrap-right">
+          <button class="btn-restart">restart</button>
+          <em class="sec">15.5</em>
         </div>
       </div>
-      <div class="board"></div>
-      <div class="init">
-        <button class="btn-start">start</button>
-      </div>
-      <div class="game-over">
-        <p>You are Failed!</p>
-        <button class="btn-again">start again</button>
-      </div>
-    </section>
-  </main>
-  ```
-  </details>
-    <details>
-      <summary>Code</summary>
+    </div>
+    <div class="board"></div>
+    <div class="init">
+      <button class="btn-start">start</button>
+    </div>
+    <div class="game-over">
+      <p>You are Failed!</p>
+      <button class="btn-again">start again</button>
+    </div>
+  </section>
+</main>
+```
+</details>
+<details>
+  <summary>Code</summary>
 
-  <blockquote>
-    <details>
-      <summary>spawn.js</summary>
+<blockquote>
+  <details>
+    <summary>spawn.js</summary>
 
   ```js
     window.btnArr
@@ -139,6 +138,5 @@
     })
   ```
   </details>
-  </blockquote>
-  </details>
-  </blockquote>
+</blockquote>
+</details>
