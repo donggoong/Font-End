@@ -9,7 +9,7 @@ React로 개발한 뉴모피즘 디자인의 각종 계산기 SPA 사이트입�
 * 2023.05.02 - 2023.05.21
 
 ### 🖼️ 미리 보기(이미지 클릭시 프로젝트 사이트로 이동합니다.)
-[![todolist](https://file.notion.so/f/s/5bf164b7-2083-493a-bea0-23e87a8f1973/calc.gif?id=beecee22-939c-4519-94a3-aa6b101e45b5&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687351001981&signature=V1a-eVJzveUV8uJjq9B86xzpMjeEy9QE3Yg0Pp5gvg0)](https://donggoong.github.io/calc)
+[![todolist](https://file.notion.so/f/s/5bf164b7-2083-493a-bea0-23e87a8f1973/calc.gif?id=beecee22-939c-4519-94a3-aa6b101e45b5&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1689127200000&signature=q5vWf1TcYJAkr2qxLO5f4s5r1co1zR8VgPDQLSNpDmI&downloadName=calc.gif)](https://donggoong.github.io/calc)
 
 ### ⚙️ 개발 환경
 - <img valign="middle" src="https://img.shields.io/badge/NodeJs-339933?style=for-the-badge&logo=Node.Js&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white">
