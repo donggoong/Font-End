@@ -10,7 +10,7 @@
 * 2023.03.13 - 2023.04.04
 
 ### 🖼️ 미리 보기(이미지 클릭시 프로젝트 사이트로 이동합니다.)
-[![todolist](https://file.notion.so/f/s/634a9930-20a0-49ae-9d7c-7d1840968458/sitetemplate.gif?id=37cecf6c-86e8-48be-a552-4745ea09cdcd&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1687365543362&signature=iUg32UgCk69tHJV5B0N-wLQ-M4NtELGuAqmPuo1Xv38)](http://goongdoong.dothome.co.kr/sitetemplate)
+[![todolist](https://file.notion.so/f/s/634a9930-20a0-49ae-9d7c-7d1840968458/sitetemplate.gif?id=37cecf6c-86e8-48be-a552-4745ea09cdcd&table=block&spaceId=c27fd0d8-39d6-4196-a8f4-dab934ac5eab&expirationTimestamp=1689127200000&signature=CYY7pawSVV-JbBpTH_ajl4AEsRr_i8e57rli6Ql7qJg&downloadName=sitetemplate.gif)](http://goongdoong.dothome.co.kr/sitetemplate)
 
 ### ⚙️ 개발 환경
 - <img valign="middle" src="https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=XAMPP&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"> <img valign="middle" src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
